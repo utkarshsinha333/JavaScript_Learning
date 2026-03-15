@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Currency Convertor</title>
 </head>
 
 <body>
-    <div>
+    <div class="container">
         <h1>Currency Convertor</h1>
         <form>
             <div class="Input">
@@ -19,25 +22,34 @@
             <div class="dropdown">
                 <div class="from">
                     <p>From</p>
-                    <img src="https://flagsapi.com/IN/flat/64.png" alt="">
-                    <select name="from">
-                        <option value="" selected>INR</option>
-                        <option value="">EUR</option>
-                        <option value="">USD</option>
-                    </select>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="">
+                        <select name="from">
+                            <!-- <option value="" selected>INR</option>
+                            <option value="">EUR</option>
+                            <option value="">USD</option> -->
+                        </select>
+                    </div>
                 </div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 <div class="to">
                     <p>To</p>
-                    <img src="https://flagsapi.com/US/flat/64.png" alt="">
-                    <select name="to">
-                        <option value="" selected>USD</option>
-                        <option value="">INR</option>
-                        <option value="">EUR</option>
-                    </select>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/IN/flat/64.png" alt="">
+                        <select name="to">
+                            <!-- <option value="" selected>USD</option>
+                            <option value="">INR</option>
+                            <option value="">EUR</option> -->
+                        </select>
+                    </div>
                 </div>
             </div>
+            <div class="msg"></div>
+            <button>Get Exchange Rate</button>
         </form>
     </div>
+    <!-- ordering of script is important -->
+    <script src="country.js"></script>
     <script src="script.js"></script>
 </body>
 
